@@ -111,5 +111,11 @@ window.addEventListener('DOMContentLoaded', () => {
     scaledData.slice(15, 20)
   ]
 
+  const net = new brain.recurrent.LSTMTimeStep({
+    inputSize: 4,
+    hiddenLayers: [8, 8],
+    outputSize: 4
+  })
+
 
 });
