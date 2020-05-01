@@ -84,6 +84,15 @@ window.addEventListener('DOMContentLoaded', () => {
     {"date": "2020-04-29", "open": "5,958.50", "high": "6,129.60", "low": "6,115.30", "close": "6,115.25"}
   ]
 
+  function scaleDown(step) { //normalize
+    return {
+      open: step.open / 5396,
+      high: step.high / 5396,
+      low: step.low / 5396,
+      close: step.close / 5396
+    }
+  }
 
+  console.log(scaleDown(rawData[0]))
 
 });
