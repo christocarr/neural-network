@@ -93,6 +93,13 @@ window.addEventListener('DOMContentLoaded', () => {
     }
   }
 
-  console.log(scaleDown(rawData[0]))
-
+  function scaleUp(step) { //denormalize
+    return {
+      open: step.open * 5396,
+      high: step.high * 5396,
+      low: step.low * 5396,
+      close: step.close * 5396
+    }
+  }
+  console.log(scaleUp(scaleDown(rawData[0])))
 });
