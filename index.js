@@ -117,5 +117,11 @@ window.addEventListener('DOMContentLoaded', () => {
     outputSize: 4
   })
 
+  net.train(trainingData, { 
+    learningRate: 0.005, 
+    errorThresh: 0.02, 
+    // log: (stats) => console.log(stats) 
+  })
 
+  console.log(scaleUp(net.run(trainingData[3])))
 });
